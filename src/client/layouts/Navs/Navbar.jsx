@@ -126,7 +126,11 @@ const Navbar = () => {
       {/* Social Medias */}
       <li className='nav__lists'>
         <ul className='list__item' data-list='Linkedin'>
-          <a href='#' className='nav__link'>
+          <a
+            href='https://www.linkedin.com/in/liuk-jhivran-tulawie-460190175/'
+            className='nav__link'
+            target='_blank'
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               className='ionicon'
@@ -143,7 +147,11 @@ const Navbar = () => {
           </a>
         </ul>
         <ul className='list__item' data-list='Github'>
-          <a href='#' className='nav__link'>
+          <a
+            href='https://github.com/LukeGibran'
+            className='nav__link'
+            target='_blank'
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               className='ionicon'
@@ -160,7 +168,11 @@ const Navbar = () => {
           </a>
         </ul>
         <ul className='list__item' data-list='Instagram'>
-          <a href='#' className='nav__link'>
+          <a
+            href='https://www.instagram.com/lukegibran/'
+            className='nav__link'
+            target='_blank'
+          >
             <svg
               xmlns='http://www.w3.org/2000/svg'
               className='ionicon'

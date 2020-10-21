@@ -3,6 +3,7 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
+  text-decoration: none;
   transition: 0.5s ease-in-out;
   &-primary {
     background-color: $tertiary;

@@ -17,6 +17,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
+    "react-simple-maps": "^2.1.2",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.3"
   },

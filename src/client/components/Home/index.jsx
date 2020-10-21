@@ -9,7 +9,14 @@ const index = () => {
         </div>
         <div className='header-right'>
           <h3>Welcome!</h3>
-          <button className='btn btn-primary download'>Resume</button>
+          <a
+            href='https://drive.google.com/file/d/19U_zGpjUL6ZUTKiyRayN2F6_d5cuHKCY/view?usp=sharing'
+            download
+            target='_blank'
+            className='btn btn-primary download'
+          >
+            Resume
+          </a>
         </div>
       </div>
       <div className='content'>

@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Maps
+
+import MapChart from './MapChart';
 const index = () => {
   return (
     <div className='section contact' id='contact'>
@@ -45,15 +48,18 @@ const index = () => {
 
           <button className='btn btn-primary'>Submit</button>
         </form>
-        <div className='card'>
-          <p>Liuk Jhivran Tulawie</p>
-          <p>(+63) 995-155-7495</p>
-          <p>
-            <span>@</span> liukjhivran@gmail.com
-          </p>
-          <p>
-            <span>Skype:</span> live:threallexz_2
-          </p>
+        <div id='map'>
+          <MapChart />
+          <div className='card'>
+            <p>Liuk Jhivran Tulawie</p>
+            <p>(+63) 995-155-7495</p>
+            <p>
+              <span>@</span> liukjhivran@gmail.com
+            </p>
+            <p>
+              <span>Skype:</span> live:threallexz_2
+            </p>
+          </div>
         </div>
       </div>
     </div>
