@@ -1,0 +1,51 @@
+#home {
+  margin-bottom: 5%;
+  .header {
+    padding-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10%;
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      .my__name {
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      h3 {
+        margin-right: 10px;
+        opacity: 0.5;
+        font-weight: 100;
+      }
+    }
+  }
+
+  .content {
+    .job {
+      font-size: 72px;
+      font-weight: 600;
+      span {
+        color: $secondary;
+      }
+    }
+
+    .job__description {
+      margin: 5% 0;
+      font-weight: 400;
+      .websites {
+        color: $secondary;
+        text-decoration: underline;
+      }
+      .web_apps {
+        color: $secondary;
+        text-decoration: underline;
+      }
+    }
+  }
+}

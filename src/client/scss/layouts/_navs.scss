@@ -1,0 +1,76 @@
+// Horizontal Nav
+.nav__horizontal {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 90px;
+  background-color: $primary_2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav__lists {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list__item {
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav__link {
+  color: $fourth;
+  width: 100%;
+  text-decoration: none;
+}
+
+.list__item {
+  position: relative;
+  padding: 15px 0;
+}
+
+.list__item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: $primary_2;
+  z-index: -1;
+  transition: 0.5s ease-out;
+  z-index: -100;
+  border-right: 3px solid $secondary;
+}
+
+.list__item:after {
+  content: attr(data-list);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 100%;
+  opacity: 0;
+  font-family: 'Rouge Script';
+  font-size: 25px;
+  font-weight: 800;
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.list__item:hover {
+  &:after {
+    opacity: 1;
+  }
+  &:before {
+    width: 200%;
+  }
+}

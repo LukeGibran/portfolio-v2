@@ -1,0 +1,82 @@
+#projects {
+  margin-bottom: 5%;
+  .header {
+    width: 100%;
+    position: relative;
+    .bg__text {
+      right: 0;
+      top: 0;
+    }
+
+    .fg__text {
+      right: 50px;
+      top: 90px;
+    }
+  }
+
+  .thumbnails {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+
+    .thumbnail__links {
+      color: #fff;
+      .thumbnail {
+        margin: 2rem 0;
+        height: 400px;
+        width: 600px;
+        box-shadow: 0 10px 10px rgba(black, 0.5);
+        position: relative;
+        cursor: pointer;
+        transition: all 0.5s ease-out;
+        border: 0px solid $tertiary;
+        &.Dulang {
+          height: 400px;
+          width: 100%;
+          background: url('../assets/img/Thumbnails/dulang.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+        &.Holistic {
+          height: 400px;
+          width: 100%;
+          background: url('../assets/img/Thumbnails/holistic.png');
+          background-size: cover;
+          background-position: center;
+        }
+        &.SDM {
+          height: 400px;
+          width: 100%;
+          background: url('../assets/img/Thumbnails/SDM.jpg');
+          background-size: cover;
+          background-position: center;
+        }
+      }
+
+      .thumbnail:hover {
+        transform: scale(0.98);
+        border: 5px solid $tertiary;
+        transform: scale(0.98);
+        color: #fff;
+        font-size: 2.5rem;
+        font-weight: 600;
+
+        &::before {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 400;
+          font-size: 32px;
+          text-align: center;
+          content: attr(data-img);
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          background: $tertiary;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}

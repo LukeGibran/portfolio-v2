@@ -1,0 +1,14 @@
+.btn {
+  padding: 12px 15px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  &-primary {
+    background-color: $tertiary;
+    color: $fourth;
+  }
+  &-primary:hover {
+    background-color: darken($color: $tertiary, $amount: 10);
+  }
+}

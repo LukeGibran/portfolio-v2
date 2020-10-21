@@ -1,0 +1,94 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+// Variables
+@import './variables';
+
+// Layouts
+@import './layouts/navs';
+@import './layouts/buttons';
+
+// Components
+@import './components/home.scss';
+@import './projects.scss';
+@import './components/contact.scss';
+@import './components/about.scss'; // Background
+@import './parallax';
+@import './components/footer.scss';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $primary;
+  color: $fourth;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app {
+  position: relative;
+}
+
+.main {
+  height: 100%;
+  padding-bottom: 50px;
+  margin-bottom: 300px;
+  background-color: $primary;
+}
+
+.container {
+  padding-left: 60px;
+}
+
+.section {
+  width: 100%;
+  padding: 0 10% 0 15%;
+}
+
+.title--bg {
+  font-size: 132px;
+  font-weight: 900;
+  position: absolute;
+  opacity: 0.1;
+}
+.title--fg {
+  position: absolute;
+  font-size: 23px;
+  font-weight: 399;
+}
+
+#spacer {
+  height: 200px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $tertiary;
+  margin: 1em 0;
+  padding: 0;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $primary_2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken($secondary, 10);
+}

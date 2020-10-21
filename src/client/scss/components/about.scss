@@ -1,0 +1,44 @@
+#about {
+  margin-bottom: 5%;
+  .header {
+    width: 100%;
+    position: relative;
+    .bg__text {
+      left: 0;
+      top: 0;
+    }
+
+    .fg__text {
+      left: 50px;
+      top: 90px;
+    }
+  }
+
+  .description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    .text {
+      p {
+        font-size: 18px;
+
+        span {
+          color: $secondary;
+          text-decoration: underline;
+        }
+      }
+    }
+    .skills {
+      justify-self: end;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;
+      .icon {
+        height: 80px;
+        width: 80px;
+      }
+    }
+  }
+}
