@@ -27,25 +27,34 @@
   }
 
   .content {
-    .job {
-      font-size: 72px;
-      font-weight: 600;
-      span {
-        color: $secondary;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .right {
+      .job {
+        font-size: 72px;
+        font-weight: 600;
+        span {
+          color: $secondary;
+        }
+      }
+
+      .job__description {
+        margin: 5% 0;
+        font-weight: 400;
+        .websites {
+          color: $secondary;
+          text-decoration: underline;
+        }
+        .web_apps {
+          color: $secondary;
+          text-decoration: underline;
+        }
       }
     }
 
-    .job__description {
-      margin: 5% 0;
-      font-weight: 400;
-      .websites {
-        color: $secondary;
-        text-decoration: underline;
-      }
-      .web_apps {
-        color: $secondary;
-        text-decoration: underline;
-      }
+    .left {
+      justify-self: end;
+      align-self: center;
     }
   }
 }

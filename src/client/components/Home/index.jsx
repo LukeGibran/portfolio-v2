@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Earth from './earth';
+
 const index = () => {
   return (
     <div className='section home' id='home'>
@@ -20,14 +22,19 @@ const index = () => {
         </div>
       </div>
       <div className='content'>
-        <h1 className='job'>
-          Web Developer <span>/</span>
-        </h1>
-        <h1 className='job'>Programmer</h1>
-        <h2 className='job__description'>
-          I create <span className='websites'>Websites</span> . I create{' '}
-          <span className='web_apps'>Web Apps</span>
-        </h2>
+        <div className='right'>
+          <h1 className='job'>
+            Web Developer <span>/</span>
+          </h1>
+          <h1 className='job'>Programmer</h1>
+          <h2 className='job__description'>
+            I create <span className='websites'>Websites</span> . I create{' '}
+            <span className='web_apps'>Web Apps</span>
+          </h2>
+        </div>
+        <div className='left'>
+          <Earth />
+        </div>
 
         <hr />
       </div>
