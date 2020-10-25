@@ -1,5 +1,8 @@
 import React from 'react';
 
+// Router
+import { NavLink } from 'react-router-dom';
+
 const index = () => {
   return (
     <div className='section projects' id='projects'>
@@ -11,21 +14,21 @@ const index = () => {
       <div id='spacer'></div>
 
       <div className='thumbnails'>
-        <a href='#' className='thumbnail__links'>
+        <NavLink to='/project/dulang' className='thumbnail__links'>
           <div
             className='thumbnail Dulang'
-            data-img='Dulang Ordering System'
+            data-img='Dulang Reservation System'
           ></div>
-        </a>
-        <a href='#' className='thumbnail__links'>
+        </NavLink>
+        <NavLink to='/project/holistic' className='thumbnail__links'>
           <div
             className='thumbnail Holistic'
             data-img='Holisticare Website'
           ></div>
-        </a>
-        <a href='#' className='thumbnail__links'>
+        </NavLink>
+        <NavLink to='/project/sdm' className='thumbnail__links'>
           <div className='thumbnail SDM' data-img='SDM Library System'></div>
-        </a>
+        </NavLink>
       </div>
     </div>
   );

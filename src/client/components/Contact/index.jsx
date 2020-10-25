@@ -42,7 +42,7 @@ const index = () => {
             id='message'
             cols='60'
             rows='10'
-            placeholder='subject'
+            placeholder='Message'
             className='form-input'
           ></textarea>
 

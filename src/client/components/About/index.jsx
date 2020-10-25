@@ -24,10 +24,11 @@ const index = () => {
           <h1>Heyy! I'm Liuk!</h1>
           <br />
           <p>Your above average web developer </p>
-          <p>who loves to create amazing to create</p>
           <p>
-            <span>amazing</span> , <span>responsive</span> &{' '}
-            <span> efficient</span> websites or web apps
+            who loves to create <span>amazing</span> , <span>responsive</span>
+          </p>
+          <p>
+            & <span> efficient</span> websites or web apps
           </p>
           <br />
           <p>

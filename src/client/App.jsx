@@ -1,33 +1,27 @@
 import React from 'react';
 import './scss/main.scss';
 
-// Components
-import About from './components/About/index';
-import Home from './components/Home/index';
-import Contact from './components/Contact/index';
-import Project from './components/Projects/index';
+// Router
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-// Background
-import Building from './components/buildings';
+// Main Page
+import MainPage from './MainPage';
 
-// Footer
-import Footer from './components/footer';
-// Layouts
-import Navbar from './layouts/Navs/Navbar';
+// Project Pages
+import Dulang from './components/Projects/dulang';
+import Holistic from './components/Projects/holistic';
+import SDM from './components/Projects/sdm';
 
 const App = () => {
   return (
-    <div className='app'>
-      <div className='main'>
-        <Navbar />
-        <Home />
-        <Project />
-        <Building />
-        <About />
-        <Contact />
-      </div>
-      <Footer />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={MainPage} />
+        <Route exact path='/project/holistic' component={Holistic} />
+        <Route exact path='/project/dulang' component={Dulang} />
+        <Route exact path='/project/sdm' component={SDM} />
+      </Switch>
+    </Router>
   );
 };
 

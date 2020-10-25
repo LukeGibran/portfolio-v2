@@ -77,3 +77,76 @@
     }
   }
 }
+
+#project {
+  background-color: $secondary;
+  border: 150px solid $primary;
+  border-top: 100px solid $primary;
+  border-bottom: 100px solid $primary;
+  padding: 80px;
+  position: relative;
+
+  .close-btn {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    z-index: 1;
+    transition: 0.5s ease-out;
+    .close-lines__btn:before,
+    .close-lines__btn:after {
+      content: '';
+      background-color: #fff;
+      position: absolute;
+    }
+    .close-lines__btn:before,
+    .close-lines__btn:after {
+      width: 1.5rem;
+      height: 0.1rem;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .close-lines__btn:before {
+      transform: translateY(-0.3rem);
+    }
+    .close-lines__btn:after {
+      transform: translateY(0.3rem);
+    }
+
+    &:hover .close-lines__btn:before {
+      width: 1.5rem;
+      transform: rotate(-45deg);
+      background-color: $tertiary;
+    }
+    &:hover .close-lines__btn:after {
+      width: 1.5rem;
+      transform: rotate(45deg);
+      background-color: $tertiary;
+    }
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .description {
+    margin-bottom: 20px;
+  }
+
+  .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+
+    .image {
+      max-width: 100%;
+    }
+  }
+}
