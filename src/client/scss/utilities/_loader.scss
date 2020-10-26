@@ -1,0 +1,19 @@
+.loader-container {
+  height: 5px;
+  width: 100%;
+  background: $secondary;
+  position: relative;
+  z-index: -1;
+  .loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: darken($color: $secondary, $amount: 10);
+    box-shadow: 0 0 10px #ff5722, /* 0 0 20px #ff5722, 0 0 30px #ff5722 */;
+    // 0 0 40px #ff5722, 0 0 50px #ff5722;
+    //  0 0 60px #ff5722, 0 0 70px #ff5722;
+    animation: extend 10s linear forwards;
+    z-index: 1;
+  }
+}

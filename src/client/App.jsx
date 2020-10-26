@@ -1,27 +1,36 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import './scss/main.scss';
 
 // Router
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // Main Page
-import MainPage from './MainPage';
+const MainPage = lazy(() => import('./MainPage'));
+// import MainPage from './MainPage';
 
 // Project Pages
-import Dulang from './components/Projects/dulang';
-import Holistic from './components/Projects/holistic';
-import SDM from './components/Projects/sdm';
+const Dulang = lazy(() => import('./components/Projects/dulang'));
+const Holistic = lazy(() => import('./components/Projects/holistic'));
+const SDM = lazy(() => import('./components/Projects/sdm'));
+
+// 404 Error  Page
+import NotFound from './components/Pages/NotFound';
+
+import LoadingPage from './components/Pages/LoadingPage';
 
 const App = () => {
   return (
-    <Router>
-      <Switch>
-        <Route exact path='/' component={MainPage} />
-        <Route exact path='/project/holistic' component={Holistic} />
-        <Route exact path='/project/dulang' component={Dulang} />
-        <Route exact path='/project/sdm' component={SDM} />
-      </Switch>
-    </Router>
+    <Suspense fallback={<LoadingPage />}>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={MainPage} />
+          <Route exact path='/project/holistic' component={Holistic} />
+          <Route exact path='/project/dulang' component={Dulang} />
+          <Route exact path='/project/sdm' component={SDM} />
+          <Route component={NotFound} />
+        </Switch>
+      </Router>
+    </Suspense>
   );
 };
 

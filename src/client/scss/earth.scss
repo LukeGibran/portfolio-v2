@@ -27,7 +27,7 @@
     -webkit-box-reflect: below 1px linear-gradient(#0001, #0002);
   }
 
-  .planetMars {
+  .planetEarth {
     position: relative;
     min-width: 50%;
     height: 100%;
@@ -36,7 +36,7 @@
     /* background: #190703; */
   }
 
-  .planetMars .loader {
+  .planetEarth .loader {
     position: relative;
     width: 400px;
     height: 400px;
@@ -44,7 +44,7 @@
     animation: animate 4s linear infinite;
   }
 
-  .planetMars .loader::before {
+  .planetEarth .loader::before {
     content: '';
     position: absolute;
     top: 0;
@@ -58,7 +58,7 @@
     border-bottom-left-radius: 200px;
   }
 
-  .planetMars .loader::after {
+  .planetEarth .loader::after {
     content: '';
     position: absolute;
     top: 0;
@@ -74,7 +74,7 @@
       0 0 80px #ff5722, 0 0 90px #ff5722, 0 0 100px #ff5722;
   }
 
-  .planetMars .loader span {
+  .planetEarth .loader span {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -84,7 +84,7 @@
     border-radius: 50%;
   }
 
-  .mars {
+  .earth {
     position: absolute;
     width: 340px;
     height: 340px;
@@ -92,10 +92,10 @@
     border-radius: 50%;
     background-size: cover;
     box-shadow: inset 0 0 20px #ff5722, 0 0 120px #ff5722;
-    animation: mars 15s linear infinite;
+    animation: earth 15s linear infinite;
   }
 
-  @keyframes mars {
+  @keyframes earth {
     0% {
       background-position: 0;
     }

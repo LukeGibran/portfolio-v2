@@ -5,6 +5,9 @@
   cursor: pointer;
   text-decoration: none;
   transition: 0.5s ease-in-out;
+  &:focus {
+    outline: none;
+  }
   &-primary {
     background-color: $tertiary;
     color: $fourth;
