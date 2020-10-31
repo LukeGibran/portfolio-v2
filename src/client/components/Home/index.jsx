@@ -22,7 +22,7 @@ const index = () => {
         </div>
       </div>
       <div className='content'>
-        <div className='right'>
+        <div className='left'>
           <h1 className='job'>
             Web Developer <span>/</span>
           </h1>
@@ -32,7 +32,7 @@ const index = () => {
             <span className='web_apps'>Web Apps</span>
           </h2>
         </div>
-        <div className='left'>
+        <div className='right'>
           <Earth />
         </div>
 

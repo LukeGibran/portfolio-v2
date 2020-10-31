@@ -180,33 +180,4 @@ hr {
   background: darken($secondary, 10);
 }
 
-@include mediaSm {
-  body {
-    width: 100%;
-  }
-
-  footer {
-    width: 100%;
-  }
-
-  #projects {
-    .thumbnails {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  #contact {
-    height: 150vh;
-    .content {
-      grid-template-columns: 1fr;
-      grid-gap: 20px;
-      place-items: center;
-      .form {
-        grid-column: 1;
-        grid-row: 2;
-        margin: 0;
-        width: 100%;
-      }
-    }
-  }
-}
+@import './responsive';

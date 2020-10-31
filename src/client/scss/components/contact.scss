@@ -17,11 +17,12 @@
   .content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    min-width: 100%;
     .form {
       margin-right: 5%;
       display: flex;
       flex-direction: column;
-
+      flex-wrap: wrap;
       .form-name-email {
         display: flex;
         justify-content: space-between;
