@@ -27,6 +27,10 @@
 
 // Animations
 @import './layouts/animations';
+
+// Responsive
+@import './media-queries';
+
 * {
   margin: 0;
   padding: 0;
@@ -174,4 +178,35 @@ hr {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: darken($secondary, 10);
+}
+
+@include mediaSm {
+  body {
+    width: 1150px;
+  }
+
+  footer {
+    width: 1150px;
+  }
+
+  #projects {
+    .thumbnails {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #contact {
+    height: 150vh;
+    .content {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      place-items: center;
+      .form {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
 }
