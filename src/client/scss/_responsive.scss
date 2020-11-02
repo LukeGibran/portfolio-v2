@@ -1,7 +1,6 @@
 @include mediaSm {
   body {
     width: 100%;
-    overflow-x: hidden;
   }
 
   footer#footer-lg {
@@ -73,13 +72,13 @@
 
   #earth {
     .earth {
-      height: 250px;
-      width: 250px;
+      height: 230px;
+      width: 230px;
     }
 
     .planetEarth .loader {
-      height: 300px;
-      width: 300px;
+      height: 280px;
+      width: 280px;
     }
   }
   #projects {
