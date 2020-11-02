@@ -1,6 +1,7 @@
 @include mediaSm {
   body {
     width: 100%;
+    overflow-x: hidden;
   }
 
   footer#footer-lg {
