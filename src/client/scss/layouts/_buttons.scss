@@ -15,4 +15,11 @@
   &-primary:hover {
     background-color: darken($color: $tertiary, $amount: 10);
   }
+  &-secondary {
+    background-color: $secondary;
+    color: $fourth;
+  }
+  &-secondary:hover {
+    background-color: darken($color: $secondary, $amount: 10);
+  }
 }

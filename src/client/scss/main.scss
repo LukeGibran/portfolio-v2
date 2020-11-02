@@ -21,6 +21,7 @@
 // Layouts
 @import './layouts/navs';
 @import './layouts/buttons';
+@import './layouts/sidenav';
 
 // Utilities
 @import './utilities/loader';
@@ -52,6 +53,10 @@ body {
   background-color: $primary;
   color: $fourth;
   font-family: 'Poppins', sans-serif;
+
+  &.open {
+    overflow: hidden;
+  }
 }
 
 .app {

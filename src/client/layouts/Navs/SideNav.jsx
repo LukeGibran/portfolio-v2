@@ -1,11 +1,16 @@
 import React from 'react';
 
-const Navbar = () => {
+const SideNav = ({ isClicked, updateClick }) => {
   const height = '25';
   const width = '25';
   return (
-    <div className='navbar'>
-      <li className='nav__lists'>
+    <div
+      className={`sidenav ${isClicked ? 'open' : ''}`}
+      id='sidenav'
+      onClick={() => updateClick()}
+    >
+      <div className='header'></div>
+      <li className='nav__lists menu'>
         <ul className='list__item' data-list='Home'>
           <a href='#home' className='nav__link'>
             <svg
@@ -33,6 +38,7 @@ const Navbar = () => {
                 strokeWidth='32'
               />
             </svg>
+            Home
           </a>
         </ul>
         <ul className='list__item' data-list='Projects'>
@@ -72,6 +78,7 @@ const Navbar = () => {
                 d='M176 208h-64a16 16 0 01-16-16v-64a16 16 0 0116-16h64a16 16 0 0116 16v64a16 16 0 01-16 16z'
               />
             </svg>
+            Projects
           </a>
         </ul>
         <ul className='list__item' data-list='About me'>
@@ -100,6 +107,7 @@ const Navbar = () => {
                 strokeWidth='32'
               />
             </svg>
+            About Me
           </a>
         </ul>
         <ul className='list__item' data-list='Contact'>
@@ -120,11 +128,12 @@ const Navbar = () => {
                 strokeWidth='32'
               />
             </svg>
+            Contact
           </a>
         </ul>
       </li>
       {/* Social Medias */}
-      <li className='nav__lists'>
+      <li className='nav__lists socialmedia'>
         <ul className='list__item' data-list='Linkedin'>
           <a
             href='https://www.linkedin.com/in/liuk-jhivran-tulawie-460190175/'
@@ -197,4 +206,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default SideNav;

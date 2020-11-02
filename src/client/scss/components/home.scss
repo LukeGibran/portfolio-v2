@@ -5,7 +5,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10%;
-
     .header-left {
       display: flex;
       align-items: center;
@@ -22,6 +21,51 @@
         margin-right: 10px;
         opacity: 0.5;
         font-weight: 100;
+      }
+    }
+
+    .menu-btn {
+      position: fixed;
+      right: 30px;
+      top: 30px;
+      cursor: pointer;
+      height: 1.5rem;
+      width: 1.5rem;
+      z-index: 1;
+      visibility: hidden;
+      transition: 0.5s ease-out;
+      .menu-btn__lines:before,
+      .menu-btn__lines:after {
+        content: '';
+        background-color: #fff;
+        position: absolute;
+      }
+      .menu-btn__lines:before,
+      .menu-btn__lines:after {
+        width: 1.5rem;
+        height: 0.1rem;
+        transition: all 0.5s ease-in-out;
+      }
+      .menu-btn__lines:after {
+        width: 1rem;
+      }
+
+      .menu-btn__lines:before {
+        transform: translatey(0.3rem);
+      }
+      .menu-btn__lines:after {
+        transform: translateY(0.9rem);
+      }
+
+      &.open .menu-btn__lines:before {
+        width: 1.5rem;
+        transform: rotate(-225deg);
+        background-color: $tertiary;
+      }
+      &.open .menu-btn__lines:after {
+        width: 1.5rem;
+        transform: rotate(225deg);
+        background-color: $tertiary;
       }
     }
   }

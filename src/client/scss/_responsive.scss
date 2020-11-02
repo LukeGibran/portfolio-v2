@@ -3,7 +3,7 @@
     width: 100%;
   }
 
-  footer {
+  #footer-lg {
     display: none;
   }
 
@@ -13,9 +13,10 @@
 
   .main {
     margin-bottom: 0;
+    padding-bottom: 0;
   }
 
-  .nav__horizontal {
+  .navbar {
     display: none;
   }
 
@@ -35,6 +36,10 @@
     .header {
       .header-right {
         display: none;
+      }
+
+      .menu-btn {
+        visibility: visible;
       }
     }
     .content {
@@ -58,13 +63,13 @@
 
   #earth {
     .earth {
-      height: 300px;
-      width: 300px;
+      height: 280px;
+      width: 280px;
     }
 
     .planetEarth .loader {
-      height: 350px;
-      width: 350px;
+      height: 330px;
+      width: 330px;
     }
   }
   #projects {
@@ -111,7 +116,8 @@
   }
 
   #contact {
-    height: 125vh;
+    height: 110vh;
+    margin-bottom: 5%;
 
     .header {
       .fg__text {
@@ -141,5 +147,18 @@
         }
       }
     }
+  }
+
+  #project {
+    border: 30px solid $primary;
+    padding: 30px;
+
+    .images {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #sidenav {
+    display: block;
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Earth from './earth';
 
-const index = () => {
+const index = ({ isClicked, updateClick }) => {
   return (
     <div className='section home' id='home'>
       <div className='header'>
@@ -12,13 +12,20 @@ const index = () => {
         <div className='header-right'>
           <h3>Welcome!</h3>
           <a
-            href='https://drive.google.com/file/d/19U_zGpjUL6ZUTKiyRayN2F6_d5cuHKCY/view?usp=sharing'
+            href='https://drive.google.com/file/d/1prCeTqSibCsIO0XjRT6NTf8TFMFd_9o3/view?usp=sharing'
             download
             target='_blank'
             className='btn btn-primary download'
           >
             Resume
           </a>
+        </div>
+
+        <div
+          className={`menu-btn ${isClicked ? 'open' : ''}`}
+          onClick={() => updateClick()}
+        >
+          <div className='menu-btn__lines'></div>
         </div>
       </div>
       <div className='content'>
