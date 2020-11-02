@@ -20,6 +20,11 @@
     padding-bottom: 0;
   }
 
+  .text-glitch-container {
+    .text-glitch {
+      font-size: 4rem;
+    }
+  }
   .navbar {
     display: none;
   }
@@ -124,9 +129,16 @@
     margin-bottom: 5%;
 
     .header {
+      .bg__text {
+        left: 0;
+      }
       .fg__text {
         top: 45px;
       }
+    }
+
+    #contact-space {
+      height: 50px;
     }
     .content {
       grid-template-columns: 1fr;
@@ -164,9 +176,5 @@
 
   #sidenav {
     display: block;
-  }
-
-  .text-glitch {
-    font-size: 5rem;
   }
 }
