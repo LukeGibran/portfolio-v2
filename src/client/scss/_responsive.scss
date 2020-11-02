@@ -128,12 +128,17 @@
     height: 110vh;
     margin-bottom: 5%;
 
+    .title--bg {
+      font-size: 65px;
+    }
+
     .header {
       .bg__text {
         left: 0;
       }
       .fg__text {
-        top: 45px;
+        top: 40px;
+        left: 50px;
       }
     }
 
