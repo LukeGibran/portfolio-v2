@@ -3,8 +3,12 @@
     width: 100%;
   }
 
-  #footer-lg {
+  footer#footer-lg {
     display: none;
+  }
+
+  footer#footer-sm {
+    display: block;
   }
 
   .section {
