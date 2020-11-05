@@ -30,9 +30,6 @@
 // Animations
 @import './layouts/animations';
 
-// Responsive
-@import './media-queries';
-
 * {
   margin: 0;
   padding: 0;
@@ -186,4 +183,4 @@ hr {
   background: darken($secondary, 10);
 }
 
-@import './responsive';
+@import './MediaQueries/all';

@@ -1,4 +1,4 @@
-@include mediaSm {
+@include mediaMd {
   body {
     width: 100%;
   }
@@ -72,13 +72,13 @@
 
   #earth {
     .earth {
-      height: 230px;
-      width: 230px;
+      height: 300px;
+      width: 300px;
     }
 
     .planetEarth .loader {
-      height: 280px;
-      width: 280px;
+      height: 350px;
+      width: 350px;
     }
   }
   #projects {
@@ -103,6 +103,9 @@
   }
 
   #about {
+    #spacer {
+      height: 150px;
+    }
     .header {
       .fg__text {
         top: 45px;
@@ -114,10 +117,12 @@
     }
 
     .description {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
 
       .skills {
         justify-self: center;
+
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
@@ -125,7 +130,7 @@
   }
 
   #contact {
-    height: 110vh;
+    height: 115vh;
     margin-bottom: 5%;
 
     .title--bg {
@@ -171,8 +176,8 @@
   }
 
   #project {
-    border: 30px solid $primary;
-    padding: 30px;
+    border: 50px solid $primary;
+    padding: 50px;
 
     .images {
       grid-template-columns: 1fr;
@@ -181,5 +186,11 @@
 
   #sidenav {
     display: block;
+    .header,
+    .nav__lists.menu,
+    .socialmedia {
+      width: 50%;
+      z-index: 1002;
+    }
   }
 }

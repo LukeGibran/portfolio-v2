@@ -1,0 +1,186 @@
+@include mediaSm {
+  body {
+    width: 100%;
+  }
+
+  footer#footer-lg {
+    display: none;
+  }
+
+  footer#footer-sm {
+    display: block;
+  }
+
+  .section {
+    padding: 0 5%;
+  }
+
+  .main {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .text-glitch-container {
+    .text-glitch {
+      font-size: 4rem;
+    }
+  }
+  .navbar {
+    display: none;
+  }
+
+  .title--bg {
+    font-size: 72px;
+  }
+
+  .title--fg {
+    font-size: 13px;
+  }
+
+  #spacer {
+    height: 100px;
+  }
+
+  #home {
+    .header {
+      .header-right {
+        display: none;
+      }
+
+      .menu-btn {
+        visibility: visible;
+      }
+    }
+    .content {
+      grid-template-columns: 1fr;
+
+      .left {
+        grid-column: 1;
+        grid-row: 2;
+        text-align: center;
+        .job {
+          font-size: 52px;
+        }
+      }
+
+      .right {
+        justify-self: center;
+        margin: 5% 0 10% 0;
+      }
+    }
+  }
+
+  #earth {
+    .earth {
+      height: 230px;
+      width: 230px;
+    }
+
+    .planetEarth .loader {
+      height: 280px;
+      width: 280px;
+    }
+  }
+  #projects {
+    .header {
+      .fg__text {
+        top: 45px;
+      }
+    }
+    .thumbnails {
+      grid-template-columns: 1fr;
+
+      .thumbnail__links {
+        .thumbnail {
+          margin: 0.5rem 0;
+        }
+      }
+
+      .thumbnail__links:last-child {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  #about {
+    .header {
+      .fg__text {
+        top: 45px;
+      }
+    }
+
+    .text {
+      margin-top: 5%;
+    }
+
+    .description {
+      grid-template-columns: 1fr;
+
+      .skills {
+        justify-self: center;
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    margin-bottom: 15%;
+  }
+
+  #contact {
+    height: 110vh;
+    margin-bottom: 5%;
+
+    .title--bg {
+      font-size: 65px;
+    }
+
+    .header {
+      .bg__text {
+        left: 0;
+      }
+      .fg__text {
+        top: 40px;
+        left: 50px;
+      }
+    }
+
+    #contact-space {
+      height: 50px;
+    }
+    .content {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      place-items: center;
+      .form {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0;
+        width: 100%;
+
+        input,
+        textarea,
+        button {
+          width: 100%;
+        }
+
+        .form-name-email {
+          width: 100%;
+          flex-direction: column;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  #project {
+    border: 30px solid $primary;
+    padding: 30px;
+
+    .images {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #sidenav {
+    display: block;
+  }
+}
