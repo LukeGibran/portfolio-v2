@@ -12,7 +12,6 @@ import Building from './components/buildings';
 
 // Footer
 import Footer from './components/footer';
-import FooterSm from './components/footer-sm';
 
 // Layouts
 import Navbar from './layouts/Navs/Navbar';
@@ -44,7 +43,6 @@ const MainPage = () => {
         <Building />
         <About />
         <Contact />
-        <FooterSm />
       </div>
       <Footer />
     </div>

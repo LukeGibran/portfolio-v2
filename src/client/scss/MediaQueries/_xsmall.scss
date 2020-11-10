@@ -1,0 +1,118 @@
+@include mediaXSm {
+  .title--bg {
+    font-size: 3rem !important;
+  }
+
+  .title--fg {
+    font-size: 10px;
+  }
+
+  #spacer {
+    height: 70px !important;
+  }
+  .main {
+    padding-bottom: 30px;
+  }
+
+  #sidenav {
+    display: block;
+    .header,
+    .nav__lists.menu,
+    .socialmedia {
+      width: 70%;
+      z-index: 1002;
+    }
+  }
+
+  #home {
+    .header {
+      .menu-btn {
+        top: 15px;
+      }
+      .header-left {
+        .my__name {
+          font-size: 15px;
+        }
+      }
+    }
+    .content {
+      .left {
+        .job {
+          font-size: 27px;
+        }
+      }
+    }
+  }
+
+  #earth {
+    .earth {
+      height: 165px;
+      width: 165px;
+    }
+
+    .planetEarth .loader {
+      height: 210px;
+      width: 210px;
+    }
+  }
+  #projects,
+  #about,
+  #contact {
+    .header {
+      .fg__text {
+        top: 30px;
+      }
+    }
+  }
+
+  .building {
+    height: 100px;
+  }
+
+  #about {
+    .description {
+      .text {
+        max-width: 100%;
+        p {
+          font-size: 15px;
+        }
+      }
+
+      .skills {
+        .icon {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+  }
+
+  #contact {
+    #map {
+      .card {
+        top: 50px;
+        right: 5px;
+        height: 130px;
+        width: 200px;
+        font-size: 12px !important;
+      }
+    }
+
+    .content {
+      max-height: 100%;
+      .form {
+        textarea {
+          height: 130px;
+        }
+      }
+    }
+  }
+
+  #project {
+    border: 15px solid $primary;
+  }
+
+  .alert {
+    font-size: 0.7rem;
+  }
+}
