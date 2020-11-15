@@ -30,11 +30,17 @@ const index = ({ isClicked, updateClick }) => {
       </div>
       <div className='content'>
         <div className='left'>
-          <h1 className='job'>
+          <h1 className='job' data-aos='fade-up'>
             Web Developer <span>/</span>
           </h1>
-          <h1 className='job'>Programmer</h1>
-          <h2 className='job__description'>
+          <h1 className='job' data-aos='fade-up' data-aos-delay='100'>
+            Programmer
+          </h1>
+          <h2
+            className='job__description'
+            data-aos='fade-up'
+            data-aos-delay='200'
+          >
             I create <span className='websites'>Websites</span> . I create{' '}
             <span className='web_apps'>Web Apps</span>
           </h2>

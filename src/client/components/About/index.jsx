@@ -13,21 +13,27 @@ const index = () => {
 
       <div className='description'>
         <div className='text'>
-          <h1>Heyy! I'm Liuk!</h1>
+          <h1 data-aos='flip-up' data-aos-delay='100'>
+            Heyy! I'm Liuk!
+          </h1>
           <br />
-          <p>Your above average web developer </p>
-          <p>
+          <p data-aos='fade-up' data-aos-delay='200'>
+            Your above average web developer{' '}
+          </p>
+          <p data-aos='fade-up' data-aos-delay='300'>
             who loves to create <span>amazing</span> , <span>responsive</span>
           </p>
-          <p>
+          <p data-aos='fade-up' data-aos-delay='400'>
             & <span> efficient</span> websites or web apps
           </p>
           <br />
-          <p>
+          <p data-aos='fade-up' data-aos-delay='500'>
             I mostly use <span>Javascript</span>
           </p>
-          <p>I love to use Mongo DB, Express JS </p>
-          <p id='last'>
+          <p data-aos='fade-up' data-aos-delay='550'>
+            I love to use Mongo DB, Express JS{' '}
+          </p>
+          <p id='last' data-aos='fade-up' data-aos-delay='600'>
             React JS & Nodejs a.k.a <span>MERN</span> Stack!{' '}
           </p>
           <hr />

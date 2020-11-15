@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import './scss/main.scss';
 
 // Router
@@ -18,7 +18,14 @@ import NotFound from './components/Pages/NotFound';
 
 import LoadingPage from './components/Pages/LoadingPage';
 
+// AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const App = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <Suspense fallback={<LoadingPage />}>
       <Router>

@@ -20,25 +20,45 @@ const SDM = ({ history }) => {
         <div className='close-btn' onClick={() => history.goBack()}>
           <div className='close-lines__btn'></div>
         </div>
-        <h1 className='title'>{title}</h1>
-        <h3 className='subtitle'>Technologies used</h3>
-        <div className='pills'>
+        <h1 className='title' data-aos='fade-up'>
+          {title}
+        </h1>
+        <h3 className='subtitle' data-aos='fade-up' data-aos-delay='100'>
+          Technologies used
+        </h3>
+        <div className='pills' data-aos='fade-up' data-aos-delay='100'>
           {languages.map((language, i) => (
             <div className='pill-wrapper' key={i}>
               <div className='pill'>{language}</div>
             </div>
           ))}
         </div>
-        <h3 className='subtitle'>Database</h3>
-        <div className='pills'>
+        <h3 className='subtitle' data-aos='fade-up' data-aos-delay='200'>
+          Database
+        </h3>
+        <div className='pills' data-aos='fade-up' data-aos-delay='200'>
           <div className='pill-wrapper'>
             <div className='pill'>{db}</div>
           </div>
         </div>
-        <p className='description'>{description}</p>
+        <p className='description' data-aos='fade-up' data-aos-delay='300'>
+          {description}
+        </p>
         <div className='images'>
-          <img src={img1} alt='image 1' className='image' />
-          <img src={img2} alt='image 2' className='image' />
+          <img
+            src={img1}
+            alt='image 1'
+            className='image'
+            data-aos='fade-up'
+            data-aos-delay='300'
+          />
+          <img
+            src={img2}
+            alt='image 2'
+            className='image'
+            data-aos='fade-up'
+            data-aos-delay='400'
+          />
         </div>
       </div>
     </div>

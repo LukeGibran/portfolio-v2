@@ -26,7 +26,7 @@ const index = () => {
       <div id='spacer'></div>
       <div id='contact-space'></div>
       <div className='content'>
-        <form className='form' onSubmit={submit}>
+        <form className='form' onSubmit={submit} data-aos='fade-up'>
           {showAlert && (
             <Alert
               message='Sorry, this contact box is not available at the moment'
@@ -71,7 +71,7 @@ const index = () => {
 
           <button className='btn btn-primary'>Submit</button>
         </form>
-        <div id='map'>
+        <div id='map' data-aos='fade-up' data-aos-delay='100'>
           <MapChart />
           <div className='card'>
             <p>Liuk Jhivran Tulawie</p>

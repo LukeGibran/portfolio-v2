@@ -14,19 +14,33 @@ const index = () => {
       <div id='spacer'></div>
 
       <div className='thumbnails'>
-        <NavLink to='/project/dulang' className='thumbnail__links'>
+        <NavLink
+          to='/project/dulang'
+          className='thumbnail__links'
+          data-aos='zoom-in'
+        >
           <div
             className='thumbnail Dulang'
             data-img='Dulang Reservation System'
           ></div>
         </NavLink>
-        <NavLink to='/project/holistic' className='thumbnail__links'>
+        <NavLink
+          to='/project/holistic'
+          className='thumbnail__links'
+          data-aos='zoom-in'
+          data-aos-delay='100'
+        >
           <div
             className='thumbnail Holistic'
             data-img='Holisticare Website'
           ></div>
         </NavLink>
-        <NavLink to='/project/sdm' className='thumbnail__links'>
+        <NavLink
+          to='/project/sdm'
+          className='thumbnail__links'
+          data-aos='zoom-in'
+          data-aos-delay='200'
+        >
           <div className='thumbnail SDM' data-img='SDM Library System'></div>
         </NavLink>
       </div>
