@@ -1,14 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-// Icons
-import JS from '../../assets/img/icons/javascript.svg';
-import HTML from '../../assets/img/icons/html.png';
-import CSS from '../../assets/img/icons/css.png';
-import Bootstrap from '../../assets/img/icons/bootstrap.png';
-import ReactJS from '../../assets/img/icons/react.svg';
-import NodeJS from '../../assets/img/icons/node.png';
-import Mongo from '../../assets/img/icons/mongo.png';
-import MySQL from '../../assets/img/icons/mysql.png';
+import Canvas from './canvas';
 
 const index = () => {
   return (
@@ -41,7 +33,7 @@ const index = () => {
           <hr />
         </div>
 
-        <div className='skills'>
+        {/* <div className='skills'>
           <img src={JS} alt='' className='icon' />
           <img src={HTML} alt='' className='icon' />
           <img src={CSS} alt='' className='icon' />
@@ -50,7 +42,9 @@ const index = () => {
           <img src={NodeJS} alt='' className='icon' />
           <img src={Mongo} alt='' className='icon' />
           <img src={MySQL} alt='' className='icon' />
-        </div>
+        </div> */}
+
+        <Canvas />
       </div>
     </div>
   );
