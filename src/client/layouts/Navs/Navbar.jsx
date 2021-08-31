@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ReactGA from 'react-ga'
+
 const Navbar = () => {
   const height = '25';
   const width = '25';
@@ -130,6 +132,8 @@ const Navbar = () => {
             href='https://www.linkedin.com/in/liuk-jhivran-tulawie-460190175/'
             className='nav__link'
             target='_blank'
+            rel="noreferrer"
+            onClick={()=> { ReactGA.event({category: 'SOCIAL_SHARES', action: "OPEN_LINK", label: "LinkedIn"}) }}
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -151,6 +155,8 @@ const Navbar = () => {
             href='https://github.com/LukeGibran'
             className='nav__link'
             target='_blank'
+            rel="noreferrer"
+            onClick={()=> { ReactGA.event({category: 'SOCIAL_SHARES', action: "OPEN_LINK", label: "Github"}) }}
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -172,6 +178,8 @@ const Navbar = () => {
             href='https://www.instagram.com/lukegibran/'
             className='nav__link'
             target='_blank'
+            rel="noreferrer"
+            onClick={()=> { ReactGA.event({category: 'SOCIAL_SHARES', action: "OPEN_LINK", label: "Instagram"}) }}
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'

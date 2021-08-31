@@ -2,6 +2,8 @@ import React from 'react';
 
 import Earth from './earth';
 
+import ReactGA from 'react-ga'
+
 const index = ({ isClicked, updateClick }) => {
   return (
     <div className='section home' id='home'>
@@ -16,6 +18,8 @@ const index = ({ isClicked, updateClick }) => {
             download
             target='_blank'
             className='btn btn-primary download'
+            rel="noreferrer"
+            onClick={()=> { ReactGA.event({category: 'Resume Download', action: "Download", label: "Resume"}) }}
           >
             Resume
           </a>

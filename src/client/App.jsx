@@ -22,9 +22,12 @@ import LoadingPage from './components/Pages/LoadingPage';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import ReactGA from 'react-ga'
+
 const App = () => {
   useEffect(() => {
     AOS.init();
+    ReactGA.pageview(window.location.pathname);
   }, []);
   return (
     <Suspense fallback={<LoadingPage />}>
