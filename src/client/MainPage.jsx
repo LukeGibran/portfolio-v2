@@ -19,6 +19,8 @@ import SideNav from './layouts/Navs/SideNav';
 
 import LoadingPage from './components/Pages/LoadingPage';
 
+import ReactGA from 'react-ga';
+
 const MainPage = () => {
   const [isClicked, setIsClicked] = useState(false);
 
@@ -27,6 +29,8 @@ const MainPage = () => {
   };
 
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname);
+
     isClicked
       ? document.body.classList.add('open')
       : document.body.classList.remove('open');

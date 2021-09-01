@@ -7,16 +7,67 @@ import MapChart from './MapChart';
 import Alert from '../Utilities/Alert';
 
 const index = () => {
-  const [showAlert, setShowAlert] = useState(false);
+  const [showAlert, setShowAlert] = useState({
+    show: false,
+    type: '',
+    alertMessage: '',
+  });
+  const [messageState, setMessageState] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const { show, type, alertMessage } = showAlert;
+  const { name, email, subject, message } = messageState;
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
+
   const submit = (e) => {
     e.preventDefault();
 
-    setShowAlert(true);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...messageState }),
+    })
+      .then(() => {
+        setShowAlert({
+          show: true,
+          type: 'success',
+          alertMessage: 'Thank you for your message!',
+        });
+
+        setMessageState({
+          name: '',
+          email: '',
+          subject: '',
+          message: '',
+        });
+      })
+      .catch(() =>
+        setShowAlert({
+          show: true,
+          type: 'danger',
+          alertMessage: 'Sorry, there was an error in processing your message.',
+        })
+      );
 
     setTimeout(() => {
-      setShowAlert(false);
+      setShowAlert({ ...showAlert, show: false });
     }, 3500);
   };
+
+  const handleChange = (e) =>
+    setMessageState({ ...messageState, [e.target.name]: e.target.value });
+
   return (
     <div className='section contact' id='contact'>
       <div className='header'>
@@ -26,28 +77,32 @@ const index = () => {
       <div id='spacer'></div>
       <div id='contact-space'></div>
       <div className='content'>
-        <form className='form' onSubmit={submit} data-aos='fade-up'>
-          {showAlert && (
-            <Alert
-              message='Sorry, this contact box is not available at the moment'
-              type='danger'
-            />
-          )}
+        <form
+          name='contact'
+          className='form'
+          onSubmit={submit}
+          data-aos='fade-up'
+        >
+          {show && <Alert message={alertMessage} type={type} />}
           <div className='form-name-email'>
             <input
               type='text'
               name='name'
               id='name'
+              value={name}
               placeholder='Name'
               className='form-input'
               required
+              onChange={handleChange}
             />
             <input
               type='email'
               name='email'
               id='email'
+              value={email}
               placeholder='Email'
               className='form-input'
+              onChange={handleChange}
               required
             />
           </div>
@@ -55,8 +110,10 @@ const index = () => {
             type='text'
             name='subject'
             id='subject'
+            value={subject}
             placeholder='Subject'
             className='form-input'
+            onChange={handleChange}
             required
           />
           <textarea
@@ -64,8 +121,10 @@ const index = () => {
             id='message'
             cols='60'
             rows='10'
+            value={message}
             placeholder='Message'
             className='form-input'
+            onChange={handleChange}
             required
           ></textarea>
 
