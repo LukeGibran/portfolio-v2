@@ -6,12 +6,17 @@ import MapChart from './MapChart';
 // Alert
 import Alert from '../Utilities/Alert';
 
+import Spinner from '../Utilities/Spinner';
+
 const index = () => {
   const [showAlert, setShowAlert] = useState({
     show: false,
     type: '',
     alertMessage: '',
   });
+  const [spinner, setSpinner] = useState(false);
+  const [disableBtn, setDisableBtn] = useState(false);
+
   const [messageState, setMessageState] = useState({
     name: '',
     email: '',
@@ -33,12 +38,14 @@ const index = () => {
   const submit = (e) => {
     e.preventDefault();
 
+    setSpinner(true);
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...messageState }),
     })
       .then(() => {
+        setSpinner(false);
         setShowAlert({
           show: true,
           type: 'success',
@@ -51,14 +58,17 @@ const index = () => {
           subject: '',
           message: '',
         });
+
+        setDisableBtn(true);
       })
-      .catch(() =>
+      .catch(() => {
+        setSpinner(false);
         setShowAlert({
           show: true,
           type: 'danger',
           alertMessage: 'Sorry, there was an error in processing your message.',
-        })
-      );
+        });
+      });
 
     setTimeout(() => {
       setShowAlert({ ...showAlert, show: false });
@@ -128,7 +138,9 @@ const index = () => {
             required
           ></textarea>
 
-          <button className='btn btn-primary'>Submit</button>
+          <button className='btn btn-primary' disabled={disableBtn}>
+            {spinner ? <Spinner /> : disableBtn ? 'Message sent!' : 'Submit'}
+          </button>
         </form>
         <div id='map' data-aos='fade-up' data-aos-delay='100'>
           <MapChart />

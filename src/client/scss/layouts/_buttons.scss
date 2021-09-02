@@ -23,3 +23,13 @@
     background-color: darken($color: $secondary, $amount: 10);
   }
 }
+
+button:disabled {
+  // border: 1px solid #999999;
+  background-color: darken($success, 25);
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  background-color: darken($success, 25);
+}

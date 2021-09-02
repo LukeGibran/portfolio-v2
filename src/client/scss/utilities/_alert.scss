@@ -12,7 +12,7 @@
   }
 
   &-success {
-    background-color: lighten($color: $success, $amount: 10);
-    border-left: 5px solid darken($color: $success, $amount: 15);
+    background-color: darken($color: $success, $amount: 15);
+    border-left: 5px solid darken($color: $success, $amount: 20);
   }
 }
